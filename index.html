@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biswajit Behura — Portfolio</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">BB.</div>
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">Introduction</div>
+      <h1>Biswajit<br><span>Behura.</span></h1>
+      <p class="hero-sub">
+        Python Developer &amp; Data Analyst based in Cuttack, Odisha.
+        I build clean, maintainable web apps and turn raw data into meaningful insights.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View my work →</a>
+        <a href="#contact" class="btn-outline">Get in touch</a>
+      </div>
+      <div class="socials">
+        <a class="social-icon" href="https://linkedin.com/in/biswajit-behura-cse" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a class="social-icon" href="https://github.com/biswajit-1234" target="_blank" rel="noopener" title="GitHub">gh</a>
+        <a class="social-icon" href="mailto:biswajibehura2005@gmail.com" title="Email">@</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="code-card">
+        <div class="code-dots">
+          <div class="dot r"></div>
+          <div class="dot y"></div>
+          <div class="dot g"></div>
+        </div>
+        <pre><span class="cm"># resume_scanner.py</span>
+<span class="kw">from</span> flask <span class="kw">import</span> Flask, request
+<span class="kw">from</span> sklearn.feature_extraction.text <span class="kw">import</span> TfidfVectorizer
+<span class="kw">from</span> sklearn.metrics.pairwise <span class="kw">import</span> cosine_similarity
+
+<span class="fn">def</span> <span class="nb">match_resume</span>(resume, job_desc):
+    vec = TfidfVectorizer()
+    matrix = vec.fit_transform([resume, job_desc])
+    score = cosine_similarity(matrix[<span class="st">0</span>], matrix[<span class="st">1</span>])
+    <span class="kw">return</span> <span class="nb">round</span>(score[<span class="st">0</span>][<span class="st">0</span>] * <span class="nb">100</span>, <span class="nb">2</span>)</pre>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Internships</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-tag">What I know</div>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cat">Languages</div>
+        <div class="skill-list">Python<br>Java<br>SQL</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat">Web &amp; Backend</div>
+        <div class="skill-list">Flask<br>HTML &amp; CSS<br>REST APIs</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat">ML &amp; NLP</div>
+        <div class="skill-list">Scikit-learn<br>TF-IDF · Cosine Similarity<br>PDFMiner</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat">Data &amp; Analytics</div>
+        <div class="skill-list">Pandas · Matplotlib · Seaborn<br>Power BI · Tableau<br>MS Excel</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat">Databases</div>
+        <div class="skill-list">MySQL<br>PL/SQL<br>Oracle Database</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cat">Tools</div>
+        <div class="skill-list">Git &amp; GitHub<br>VS Code<br>Jupyter Notebook</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-tag">Selected work</div>
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <div class="proj-badge">Final Year Project</div>
+          <div class="proj-title">Resume Scanner Web Application</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-desc">
+            Full-stack NLP app that matches resumes to job descriptions using TF-IDF
+            vectorisation and cosine similarity scoring — achieving ~85% keyword-match
+            accuracy across 50+ test resumes.
+          </p>
+          <div class="proj-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">NLP</span>
+            <span class="tag">PDFMiner</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+          <a class="proj-link" href="https://github.com/biswajit-1234/resume-scanner" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <div class="proj-badge">Data Analytics</div>
+          <div class="proj-title">Network Churn Analysis Dashboard</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-desc">
+            Analyzed 7,000+ telecom customer records to surface key churn drivers.
+            Built interactive Power BI &amp; Tableau dashboards, cutting manual reporting
+            time by ~40%.
+          </p>
+          <div class="proj-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+          </div>
+          <a class="proj-link" href="https://github.com/biswajit-1234" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-tag">Work history</div>
+    <h2>Experience</h2>
+    <div class="exp-list">
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Data Analytics Intern</div>
+            <div class="exp-company">Deloitte</div>
+          </div>
+          <div class="exp-date">Jul 2025</div>
+        </div>
+        <ul class="exp-points">
+          <li>Developed Python scripts for data cleaning, transformation, and analysis within a professional project team.</li>
+          <li>Built and deployed summary dashboards and reports presented to business stakeholders.</li>
+          <li>Contributed to root cause analysis of data quality issues in enterprise-level pipelines.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Data Analytics Intern</div>
+            <div class="exp-company">CTTC, Bhubaneswar</div>
+          </div>
+          <div class="exp-date">May – Jun 2025</div>
+        </div>
+        <ul class="exp-points">
+          <li>Built predictive models and dashboards using Python, Tableau, and Power BI.</li>
+          <li>Wrote and tested data processing scripts producing clean, reproducible analysis outputs.</li>
+          <li>Presented data-driven insights translated into clear business recommendations.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <h2 class="certs-heading">Certifications</h2>
+    <div class="certs-row">
+      <div class="cert-card">
+        <div class="cert-icon">OCI</div>
+        <div>
+          <div class="cert-title">Oracle Fusion AI Agent Studio — Foundation Associate REL 1</div>
+          <div class="cert-issuer">Oracle University</div>
+          <div class="cert-date">September 2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">PY</div>
+        <div>
+          <div class="cert-title">Python Programming Certification</div>
+          <div class="cert-issuer">Infosys Springboard</div>
+          <div class="cert-date">November 2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sec-tag">Let's talk</div>
+    <h2>Get In Touch</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro">
+          Open to full-time roles, internships, and freelance projects.
+          Whether you have a question or just want to say hello — my inbox is always open.
+        </p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:biswajibehura2005@gmail.com">
+            <div class="cl-icon">@</div>biswajibehura2005@gmail.com
+          </a>
+          <div class="contact-link">
+            <div class="cl-icon">📍</div>Cuttack, Odisha, India
+          </div>
+          <a class="contact-link" href="https://linkedin.com/in/biswajit-behura-cse" target="_blank" rel="noopener">
+            <div class="cl-icon">in</div>linkedin.com/in/biswajit-behura-cse
+          </a>
+          <a class="contact-link" href="https://github.com/biswajit-1234" target="_blank" rel="noopener">
+            <div class="cl-icon">gh</div>github.com/biswajit-1234
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-area">
+        <form onsubmit="handleForm(event)">
+          <div class="form-row">
+            <label for="fname">Name</label>
+            <input id="fname" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label for="femail">Email</label>
+            <input id="femail" type="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-row">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" rows="4" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Send message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">© 2026 Biswajit Behura — Cuttack, Odisha</div>
+    <div class="footer-right">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
